@@ -11,6 +11,7 @@ This project is a web-based application designed to help users track fitness, wo
 - Dietician guidance
 - Admin panel
 - Health monitoring
+- Chatbot 
 
 ## 🛠️ Technologies Used
 - PHP
