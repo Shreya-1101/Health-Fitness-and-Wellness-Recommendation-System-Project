@@ -1,0 +1,168 @@
+/* =========================================
+   PAGE CONTAINER
+========================================= */
+body{
+font-family:"Poppins",sans-serif;
+background:linear-gradient(135deg,#eefaf4,#e3f4ec);
+margin:0;
+}
+
+.container{
+width:90%;
+margin:30px auto;
+text-align:center;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+.title{
+font-family:"Playfair Display",serif;
+font-size:32px;
+color:#1b4332;
+}
+
+.subtitle{
+color:#4c6f66;
+margin-bottom:30px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+.dietician-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+.dietician-card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.dietician-card:hover{
+transform:translateY(-6px);
+}
+
+/* =========================================
+   IMAGE FIX (IMPORTANT)
+========================================= */
+.img-box{
+width:80px;
+height:80px;
+margin:0 auto 10px;
+border-radius:50%;
+overflow:hidden;
+border:3px solid #2d6a4f;
+}
+
+.img-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+.dietician-card h3{
+margin:8px 0;
+color:#1b4332;
+font-size:20px;
+font-family: playfair display, serif;
+}
+
+.specialization{
+font-size:18px;
+color:#555;
+margin:8px 0;
+line-height:1.5;
+font-family: Playfair Display, serif;
+text-align:left;
+padding-left:20px;
+margin:10px 0;
+}
+
+.experience{
+color:#2d6a4f;
+font-weight:600;
+font-size:16px;
+margin-top:5px;
+}
+
+.contact{
+font-size:14px;
+color:#444;
+margin:5px 0 10px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.visit-btn{
+display:inline-block;
+padding:8px 16px;
+background:#2d6a4f;
+color:white;
+border-radius:20px;
+text-decoration:none;
+font-size:16px;
+transition:0.2s;
+}
+
+.visit-btn:hover{
+background:#1b4332;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.action{
+margin-top:25px;
+}
+
+.back-btn{
+text-decoration:none;
+background:#1b4332;
+color:white;
+padding:10px 20px;
+border-radius:10px;
+}
+
+.back-btn:hover{
+background:#163b2b;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media(max-width:900px){
+.dietician-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.dietician-grid{
+grid-template-columns:1fr;
+}
+}
+
+.diet-card img{
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #2e8b57;
+}

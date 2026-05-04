@@ -1,0 +1,259 @@
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#eefaf4,#e3f4ec);
+min-height:100vh;
+color:#1b4332;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 60px; /* reduced */
+background:#275E44;
+color:white;
+}
+
+.logo{
+font-size:28px; /* smaller */
+font-family:"Playfair Display",serif;
+}
+
+.nav-links{
+display:flex;
+gap:18px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+padding:6px 12px;
+border-radius:6px;
+font-size:14px;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+background:#4FC394;
+}
+
+/* =========================================
+   CENTER WRAPPER (ALL PAGES)
+========================================= */
+.register-wrapper,
+.register-container,
+.edit-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;  /* center vertically */
+min-height:85vh;     /* FIX HEIGHT */
+padding:20px;
+}
+
+/* =========================================
+   CARD (COMMON)
+========================================= */
+.register-card,
+.register-box,
+.edit-card,
+.auth-card{
+width:100%;
+max-width:650px;   /* FIX: smaller width */
+background:white;
+padding:30px;      /* reduced */
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* smaller card for login/reset */
+.register-box,
+.auth-card{
+max-width:400px;
+}
+
+/* =========================================
+   HEADINGS
+========================================= */
+h2,
+.auth-title{
+text-align:center;
+font-family:"Playfair Display",serif;
+font-size:26px;  /* smaller */
+margin-bottom:5px;
+}
+
+.subtitle,
+.auth-subtitle{
+text-align:center;
+font-size:14px;
+margin-bottom:18px;
+color:#4c6f66;
+}
+
+/* =========================================
+   GRID
+========================================= */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;  /* reduced */
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+.input-box label,
+.input-group label{
+font-size:13px;
+font-weight:600;
+}
+
+input,
+select{
+width:100%;
+padding:10px;   /* smaller */
+border-radius:8px;
+border:1px solid #b5d4c7;
+font-size:14px;
+margin-top:4px;
+}
+
+input:focus{
+border-color:#2d6a4f;
+outline:none;
+}
+
+/* =========================================
+   PASSWORD ICON (FIXED SMALL)
+========================================= */
+.password-wrapper{
+position:relative;
+}
+
+.password-wrapper input{
+padding-right:35px;
+}
+
+.toggle-password{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+font-size:16px;   /* FIXED SMALL */
+cursor:pointer;
+opacity:0.7;
+}
+
+.toggle-password:hover{
+opacity:1;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.reg-btn,
+.register-btn,
+.auth-btn,
+.save-btn{
+width:100%;
+margin-top:15px;
+padding:10px;
+background:#275E44;
+color:white;
+border:none;
+border-radius:10px;
+font-size:14px;
+cursor:pointer;
+}
+
+.reg-btn:hover,
+.register-btn:hover,
+.auth-btn:hover,
+.save-btn:hover{
+background:#1f4e39;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+.switch,
+.login-link,
+.auth-link,
+.forgot-link{
+text-align:center;
+margin-top:12px;
+font-size:13px;
+}
+
+a{
+color:#275E44;
+text-decoration:none;
+font-weight:600;
+}
+
+/* =========================================
+   ALERT
+========================================= */
+.error-box{
+background:#ffe4e4;
+color:#b02a37;
+padding:8px;
+border-left:4px solid #d9534f;
+border-radius:6px;
+margin-bottom:12px;
+font-size:13px;
+}
+
+.success-banner{
+background:#d1f5df;
+padding:8px;
+border-left:4px solid #2d6a4f;
+font-size:13px;
+}
+
+/* =========================================
+   RESET PASSWORD NAV FIX
+========================================= */
+.glass-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 60px;
+background:#275E44;
+color:white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.register-card,
+.edit-card{
+padding:25px;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+}

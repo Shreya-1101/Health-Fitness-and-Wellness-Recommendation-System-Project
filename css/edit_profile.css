@@ -1,0 +1,115 @@
+/* GLOBAL */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins', sans-serif; background:#F4FBF8; }
+
+/* NAVBAR */
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 70px;
+    background:#2E6B4E;
+    color:white;
+}
+
+.logo span{
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/*Logo Image FIx*/
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+    transform: scale(2);   /* zoom logo */
+}
+
+.nav-links a {
+    color:white;
+    padding:8px 14px;
+    margin-left:20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+}
+.nav-links a:hover,
+.nav-links .active { background:#4FC394; }
+
+.logout { border:2px solid #4FC394; }
+
+/* FORM WRAPPER */
+.edit-wrapper {
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.edit-card {
+    width:800px;
+    background:white;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.edit-card h2 {
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    color:#275E44;
+    font-size:32px;
+}
+.subtitle {
+    text-align:center;
+    margin-bottom:25px;
+    color:#3b5046;
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-box label {
+    font-size:14px;
+    font-weight:600;
+    color:#275E44;
+}
+.input-box input,
+.input-box select {
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #bccfc6;
+    margin-top:5px;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+    margin-top:30px;
+    width:100%;
+    padding:14px;
+    background:#275E44;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+}
+.save-btn:hover {
+    background:#1f4e39;
+}

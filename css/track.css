@@ -1,0 +1,265 @@
+/* ===============================
+   GLOBAL STYLING
+=============================== */
+body{
+background:linear-gradient(135deg,#e8fdf5,#f0fdf4);
+font-family:"Poppins",sans-serif;
+margin:0;
+}
+
+/* ===============================
+   MAIN CONTAINER
+=============================== */
+.container{
+width:55%;
+margin:25px auto;
+background:white;
+padding:20px;
+border-radius:25px;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   HEADINGS
+=============================== */
+h1{
+text-align:center;
+font-family:"Playfair Display",serif;
+color:#275E44;
+margin-bottom:5px;
+font-size:30px;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:20px;
+color:#4E6E5A;
+font-size:16px;
+}
+
+/* ===============================
+   CARD DESIGN
+=============================== */
+.card{
+background:#ffffff;
+padding:14px; /* reduced */
+border-radius:18px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+border-left:5px solid #2d6a4f;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+/* ===============================
+   INPUT GRID
+=============================== */
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+/* ===============================
+   INPUT FIELD
+=============================== */
+.field{
+display:flex;
+flex-direction:column;
+gap:6px;
+margin-top:5px;
+}
+
+.field label{
+font-weight:600;
+color:#275E44;
+}
+
+.field input{
+width:100%;
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+.field input:focus{
+border-color:#2d6a4f;
+outline:none;
+}
+
+/* ===============================
+   WATER SECTION
+=============================== */
+.water-container{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.water-buttons{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.water-buttons button{
+padding:6px 12px;
+border-radius:18px;
+border:2px solid #2d6a4f;
+background:white;
+color:#2d6a4f;
+font-size:13px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.water-buttons button:hover{
+background:#2d6a4f;
+color:white;
+}
+
+/* ===============================
+   BUTTON
+=============================== */
+.save-btn{
+display:block;              /* center align */
+margin:15px auto 0;
+background:linear-gradient(135deg,#52b788,#2d6a4f);
+color:white;
+padding:8px 18px;
+border:none;
+border-radius:22px;
+cursor:pointer;
+font-weight:600;
+font-size:13px;
+transition:0.3s;
+}
+
+.save-btn:hover{
+transform:translateY(-2px);
+background:linear-gradient(135deg,#40916c,#1b4332);
+}
+
+/* ===============================
+   PROGRESS GRID
+=============================== */
+.progress-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* ===============================
+   PROGRESS BAR
+=============================== */
+.progress-bar{
+height:10px;
+background:#e5e7eb;
+border-radius:10px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.progress-fill{
+height:100%;
+background:linear-gradient(135deg,#52b788,#2d6a4f);
+}
+
+.water-fill{
+height:100%;
+background:linear-gradient(135deg,#74c0fc,#339af0);
+}
+
+/* ===============================
+   NOTES TEXTAREA (FIXED)
+=============================== */
+textarea{
+width:100%;
+height:60px;        /* 🔥 reduced size */
+border-radius:10px;
+border:1px solid #d1d5db;
+padding:8px;
+font-size:13px;
+background:#f9fafb;
+resize:none;
+transition:0.2s;
+}
+
+textarea:focus{
+outline:none;
+border-color:#2d6a4f;
+background:white;
+box-shadow:0 0 0 2px rgba(45,106,79,0.1);
+}
+
+/* ===============================
+   GRAPH FIX
+=============================== */
+/* SIDE BY SIDE GRAPHS */
+.progress-row{
+display:flex;
+gap:20px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.card.half{
+flex:1;
+min-width:300px;
+}
+
+/* CONTROL HEIGHT */
+canvas{
+height:220px !important;
+}
+
+
+/* ===============================
+   CENTER ALIGN
+=============================== */
+.center{
+text-align:center;
+}
+
+/* ===============================
+   BACK BUTTON
+=============================== */
+.back {
+display: block;
+width: fit-content;
+margin: 12px auto;
+padding: 8px 18px;
+background: #275E44;
+color: white;
+border-radius: 10px;
+text-decoration: none;
+font-weight: 600;
+}
+
+.back:hover {
+background: #1e4c37;
+transform: scale(1.03);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+@media(max-width:900px){
+
+.container{
+width:90%;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.progress-grid{
+grid-template-columns:1fr;
+}
+
+}

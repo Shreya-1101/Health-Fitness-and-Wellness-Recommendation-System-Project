@@ -1,0 +1,171 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F4FBF8;
+    color: #1A2E25;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background: #2E6B4E;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo span{
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/*Logo Image FIx*/
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+    transform: scale(2);   /* zoom logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.nav-links a:hover,
+.nav-links .active {
+    background: #4FC394;
+}
+.nav-links .login {
+    border: 2px solid #4FC394;
+    border-radius: 8px;
+}
+
+/* REGISTER SECTION */
+.register-wrapper {
+    padding: 30px 20px; /* reduced */
+    display: flex;
+    justify-content: center;
+}
+.register-card {
+    width: 750px;
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.register-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #275E44;
+    text-align: center;
+}
+.register-card h2 span {
+    color: #4FC394;
+}
+.subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #3b5046;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.input-box label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #275E44;
+}
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b4c8bd;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: #ffffffb9;
+    font-size: 15px;
+}
+
+/* PASSWORD FIELD */
+.password-wrapper {
+    position: relative;
+}
+.password-wrapper input {
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    border: 1.6px solid #8bb7a2;
+    border-radius: 12px;
+}
+.toggle-password {
+    width: 22px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+}
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* BUTTON */
+.reg-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background: #275E44;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.reg-btn:hover {
+    background: #1f4e39;
+}
+
+/* SWITCH TEXT */
+.switch {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.switch a {
+    color: #275E44;
+    font-weight: 600;
+}

@@ -1,0 +1,491 @@
+/* -------------------------
+   GLOBAL
+--------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eefaf4, #e3f4ec);
+    height: 100vh;              /* FIXED HEIGHT */
+    overflow: hidden;           /* REMOVE SCROLL */
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------
+   BACKGROUND SHAPES
+--------------------------*/
+.shape1, .shape2 {
+    position: absolute;
+    background: rgba(45, 106, 79, 0.28);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.shape1 {
+    width: 260px;
+    height: 260px;
+    top: -40px;
+    left: -60px;
+}
+
+.shape2 {
+    width: 240px;
+    height: 240px;
+    bottom: -50px;
+    right: -50px;
+}
+
+/* -------------------------
+   NAVBAR
+--------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background: #2E6B4E;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo span{
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/*Logo Image FIx*/
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+    transform: scale(2);   /* zoom logo */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: #4FC394;
+}
+.nav-links .login {
+    border: 2px solid #4FC394;
+    border-radius: 8px;
+}
+
+
+/* -------------------------
+   LOGIN CONTAINER
+--------------------------*/
+.register-container {
+    flex: 1; /* take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* vertical center */
+    padding: 20px;
+}
+
+/* LOGIN CARD BOX */
+.register-box {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 40px 35px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeUp 0.45s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 2.1rem;
+    color: #163b2b;
+}
+
+.subtitle {
+    text-align: center;
+    color: #497367;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+/* -------------------------
+   INPUT FIELDS
+--------------------------*/
+.input-box {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1b4332;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #b5d4c7;
+    background: white;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2d6a4f;
+}
+
+/* PASSWORD WRAPPER */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 45px;
+}
+
+/* Eye Icon */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    color: #2d6a4f;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* -------------------------
+   LOGIN BUTTON
+--------------------------*/
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    transform: translateY(-3px);
+}
+
+/* -------------------------
+   LINKS
+--------------------------*/
+.login-link,
+.forgot-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-link a,
+.forgot-link a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ERROR BOX */
+.error-box {
+    padding: 10px;
+    background: #ffdede;
+    color: #b30000;
+    border-left: 4px solid #ff5757;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .register-box {
+        padding: 30px 25px;
+    }
+}
+
+
+/*RESET PASSWORD PAGE*/
+/* ===========================
+   GLOBAL RESET + FONTS
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f3faf6, #e9f5ef);
+    color: #103a29;
+    min-height: 100vh;
+}
+
+/* ===========================
+   NAVBAR (Glass)
+=========================== */
+.glass-nav {
+    width: 100%;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2E6B4E;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    color: #ebf2ef;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-outline {
+    border: 2px solid #40916c;
+    color: #1b4332;
+}
+
+.btn-outline:hover {
+    background: #40916c;
+    color: white;
+}
+
+.btn-glow {
+    background: #1b4332;
+    color: white;
+}
+
+.btn-glow:hover {
+    background: #143526;
+}
+
+/* ===========================
+   AUTH CARD
+=========================== */
+.auth-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px 45px;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-title {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    color: #1b4332;
+    margin-bottom: 5px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #4c6f66;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   INPUT GROUP
+=========================== */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1b4332;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px;
+    margin-top: 6px;
+    border: 1px solid #b9d7c4;
+    border-radius: 12px;
+    background: #ffffffda;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.input-group input:focus {
+    border-color: #1b4332;
+    background: #ffffff;
+}
+
+/* ===========================
+   PASSWORD VISIBILITY
+=========================== */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 45px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #52796f;
+    transition: 0.25s;
+}
+
+.toggle-password:hover {
+    color: #1b4332;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1b4332;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #163b2b;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   LINK BELOW FORM
+=========================== */
+.auth-link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.auth-link a {
+    color: #1b4332;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===========================
+   SUCCESS / ERROR BANNERS
+=========================== */
+.success-banner,
+.error-banner {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.success-banner {
+    background: #d1f5df;
+    border-left: 4px solid #2d6a4f;
+    color: #1b4332;
+}
+
+.error-banner {
+    background: #ffe4e4;
+    border-left: 4px solid #d9534f;
+    color: #b02a37;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+    .auth-card {
+        margin: 40px 20px;
+        padding: 35px;
+    }
+
+    .glass-nav {
+        padding: 15px 25px;
+    }
+}

@@ -1,0 +1,360 @@
+body{
+margin:0;
+font-family:Poppins;
+display:flex;
+font-size:18px;
+}
+
+.sidebar{
+width:220px;
+background:#1f5e46;
+color:white;
+height:100vh;
+padding:20px;
+font-size: 20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+    font-size:30px;
+    color:white;  /* ✅ ADD THIS */
+}
+
+.sidebar a{
+display:block;
+color:white;
+padding:10px;
+text-decoration:none;
+margin-bottom:10px;
+border-radius:5px;
+}
+
+.sidebar a:hover{
+background:#2e8b57;
+}
+
+.main{
+flex:1;
+padding:40px;
+background:#f4f6f8;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+width:200px;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+height:180px;
+font-size:18px;
+}
+
+.card a{
+display:inline-block;
+margin-top:auto;
+padding:8px 15px;
+background:#2e8b57;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+/*exercise section*/
+/* ===== Table Section ===== */
+
+.data-table{
+width:100%;
+border-collapse:collapse;
+background:white;
+margin-top:20px;
+table-layout:fixed;
+}
+
+.data-table th,
+.data-table td{
+padding:12px;
+border:1px solid #ddd;
+text-align:center;
+vertical-align:middle;
+}
+
+.data-table th{
+background:#2e8b57;
+color:white;
+font-weight:600;
+}
+
+.data-table tr:nth-child(even){
+background:#f9f9f9;
+}
+
+.data-table tr:hover{
+background:#f1f1f1;
+}
+
+/* keep long text neat */
+.data-table td{
+word-wrap:break-word;
+}
+
+/* column widths */
+.data-table th:nth-child(1){width:50px;}
+.data-table th:nth-child(2){width:120px;}
+.data-table th:nth-child(3){width:120px;}
+.data-table th:nth-child(4){width:300px;}
+.data-table th:nth-child(5){width:120px;}
+.data-table th:nth-child(6){width:120px;}
+.data-table th:nth-child(7){width:150px;}
+.data-table th:nth-child(8){width:150px;}
+
+/* action buttons alignment */
+.actions{
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+/* buttons */
+.add-btn,
+.edit-btn{
+background:#3498db;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+text-decoration:none;
+font-size:16px;
+}
+
+.delete-btn{
+background:#e74c3c;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+text-decoration:none;
+font-size:14px;
+}
+
+.edit-btn:hover{
+background:#2980b9;
+}
+
+.delete-btn:hover{
+background:#c0392b;
+}
+
+.view-btn{
+background:#27ae60;
+color:white;
+padding:5px 10px;
+border-radius:4px;
+text-decoration:none;
+font-size:13px;
+}
+
+.view-btn:hover{
+background:#1e8449;
+}
+
+
+
+/* ===== DASHBOARD ONLY STYLES ===== */
+
+/* ===== DASHBOARD ONLY ===== */
+.dashboard-main{
+background:#f4f6f8;
+}
+
+/* ===== TOP BAR ===== */
+.dashboard-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.dashboard-top h1{
+font-size:30px;
+margin:0;
+}
+
+.top-right{
+font-size:18px;
+}
+
+/* ===== STATS ===== */
+.dashboard-main .stats{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.dashboard-main .stat-box{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+font-size:20px;
+}
+
+.dashboard-main .stat-box:hover{
+transform:translateY(-4px);
+}
+
+.dashboard-main .stat-box h2{
+margin:0;
+color:#2e8b57;
+font-size:30px;
+}
+
+.dashboard-main .stat-box p{
+margin:5px 0 0;
+font-size:20px;
+}
+
+/* ===== MAIN CARDS GRID ===== */
+.dashboard-main .dashboard-cards{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:25px;
+}
+
+/* ===== CARD ===== */
+.dashboard-main .dashboard-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
+}
+
+.dashboard-main .dashboard-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+.dashboard-main .dashboard-card h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.dashboard-main .dashboard-card p{
+font-size:16px;
+color:#666;
+margin-bottom:15px;
+font-size:20px;
+}
+
+.dashboard-main .dashboard-card a{
+display:inline-block;
+padding:8px 16px;
+background:#2e8b57;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:16px;
+}
+
+.dashboard-main .dashboard-card a:hover{
+background:#256f47;
+}
+
+/* ===== DIETICIAN TABLE ONLY ===== */
+
+.diet-table{
+table-layout:auto;
+}
+
+.diet-table th:nth-child(3),
+.diet-table td:nth-child(3){
+width:40%;
+min-width:300px;
+text-align:left;
+vertical-align:top;
+}
+
+.diet-table td{
+white-space:normal;
+word-break:break-word;
+line-height:1.6;
+}
+
+.diet-table img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:50%;
+border:2px solid #2e8b57;
+}
+
+/* ===== DIETICIAN TABLE ONLY (SAFE) ===== */
+
+.diet-table{
+table-layout:auto;
+}
+
+.diet-table td{
+vertical-align:top;
+padding:15px;
+}
+
+/* specialization */
+.diet-table .spec-col{
+width:30%;
+}
+
+.diet-table .spec-col ul{
+margin:0;
+padding-left:18px;
+}
+
+.diet-table .spec-col li{
+margin-bottom:6px;
+line-height:1.5;
+}
+
+/* contact */
+.diet-table .contact-col{
+white-space:pre-line;
+line-height:1.5;
+}
+
+/* name */
+.diet-table td:nth-child(2){
+font-weight:600;
+}
+
+/* experience */
+.diet-table td:nth-child(4){
+text-align:center;
+font-weight:500;
+}
+
+/* image */
+.diet-table img{
+width:80px;
+height:90px;
+object-fit:cover;
+border-radius:50%;
+border:2px solid #2e8b57;
+}
+
+/* ✅ FIX: only affect dietician action buttons */
+.diet-table .actions{
+display:flex;
+flex-direction:column;
+gap:8px;
+align-items:center;
+}
