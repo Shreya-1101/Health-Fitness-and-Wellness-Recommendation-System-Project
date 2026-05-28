@@ -1,9 +1,9 @@
-# 🏋️ Health Fitness and Wellness Project
+#  Health Fitness and Wellness Project
 
-## 📌 Description
+##  Description
 This project is a web-based application designed to help users track fitness, workouts, and overall wellness.
 
-## 🚀 Features
+##  Features
 - User login system
 - Progress Tracking
 - Diet planning
@@ -13,14 +13,14 @@ This project is a web-based application designed to help users track fitness, wo
 - Health monitoring
 - Chatbot 
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - PHP
 - MySQL
 - HTML, CSS
 - XAMPP
 
 
-## ⚙️ How to Run
+##  How to Run
 1. Install XAMPP
 2. Place project in htdocs folder
 3. Start Apache & MySQL
@@ -28,5 +28,5 @@ This project is a web-based application designed to help users track fitness, wo
 
 ---
 
-## 👩‍💻 Author
+## Author
 Shreya
